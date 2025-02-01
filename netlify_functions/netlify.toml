@@ -1,3 +1,10 @@
 [build]
-  functions = "netlify-functions"
-  publish = "dist"
+  functions = "netlify_function"  # Directory where your functions reside
+  publish = "/"                   # Since you have no static files
+  command = "pip install -r requirements.txt"  # To install the dependencies
+
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/netlify_function/flask_app"  # Correct path to the function
+  status = 200
+  force = true
