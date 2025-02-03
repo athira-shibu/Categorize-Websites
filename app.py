@@ -25,9 +25,13 @@ def scrape_website(url):
 def categorize_website(text):
     """Categorizes the website based on keywords in the text."""
     categories = {
-        "Contractors": ["construction", "building", "contractor"],
-        "Architects": ["architecture", "design", "blueprint"],
-        "Suppliers": ["materials", "supplier", "concrete"]
+        "Labour Hire": ["labour hire", "workforce", "recruitment", "staffing"],
+        "Mining": ["mining", "excavation", "minerals", "ore", "quarry"],
+        "Rubbish Removals": ["rubbish", "waste disposal", "junk removal", "skip bin"],
+        "Interior Fitouts": ["interior", "renovation", "fitout", "office design"],
+        "Testers": ["testing", "quality assurance", "site inspection"],
+        "Estimators": ["estimation", "cost analysis", "project budget"],
+        "Flooring": ["flooring", "tiles", "carpet", "hardwood", "vinyl"]
     }
     
     for category, keywords in categories.items():
